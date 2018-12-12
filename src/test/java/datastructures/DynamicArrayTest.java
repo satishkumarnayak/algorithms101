@@ -6,11 +6,11 @@ import org.junit.Test;
 
 public class DynamicArrayTest {
 
-    private DynamicArray array;
+    private DynamicArray2 array;
 
     @Before
     public void SetUp() throws Exception {
-        array = new DynamicArray<String>(2);
+        array = new DynamicArray2<String>(3);
     }
 
     @Test
@@ -46,14 +46,14 @@ public class DynamicArrayTest {
         Assert.assertEquals("a", array.get(0));
         Assert.assertEquals("c", array.get(1));
     }
-
+   
     @Test
     public void isEmpty() throws Exception {
         Assert.assertTrue(array.isEmpty());
         array.add("a");
         Assert.assertFalse(array.isEmpty());
     }
-
+   
     @Test
     public void Contains() throws Exception {
         Assert.assertFalse(array.Contains("a"));
