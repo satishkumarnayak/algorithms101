@@ -6,14 +6,14 @@ import org.junit.Test;
 
 public class LinkedListTest {
 
-    private LinkedList linkedList;
+    private LinkedList2 linkedList;
 
     @Before
     public void SetUp() throws Exception {
-        linkedList = new LinkedList();
+        linkedList = new LinkedList2();
     }
 
-    @Test
+ //   @Test
     public void AddFront() {
         linkedList.addFront(1);
         linkedList.addFront(2);
@@ -23,13 +23,13 @@ public class LinkedListTest {
         Assert.assertEquals(1, linkedList.getLast());
     }
 
-    @Test
+ //   @Test
     public void GetFirst() {
         linkedList.addFront(1);
         Assert.assertEquals(1, linkedList.getFirst());
     }
 
-    @Test
+  //    @Test
     public void GetLast() {
         linkedList.addFront(1);
         linkedList.addFront(2);
@@ -38,7 +38,8 @@ public class LinkedListTest {
         Assert.assertEquals(1, linkedList.getLast());
     }
 
-    @Test
+   
+ //   @Test
     public void AddBack() {
         linkedList.addBack(1);
         linkedList.addBack(2);
@@ -47,17 +48,21 @@ public class LinkedListTest {
         Assert.assertEquals(1, linkedList.getFirst());
         Assert.assertEquals(3, linkedList.getLast());
     }
-
-    @Test
+   
+  //  @Test
     public void Size() {
         Assert.assertEquals(0, linkedList.size());
         linkedList.addBack(1);
         Assert.assertEquals(1, linkedList.size());
         linkedList.addBack(2);
         Assert.assertEquals(2, linkedList.size());
+        linkedList.addBack(3);
+        linkedList.addBack(4);
+        Assert.assertEquals(4, linkedList.size());
     }
 
-    @Test
+   
+  //  @Test
     public void Clear() {
         linkedList.addBack(1);
         linkedList.addBack(2);
