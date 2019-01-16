@@ -5,14 +5,14 @@ import org.junit.Test;
 
 public class GraphTest {
 
-    private Graph g;
+    private Graph1 g;
 
     @Before
     public void SetUp() throws Exception {
-        g = new Graph(8);
+        g = new Graph1(8);
     }
 
-    @Test
+  //  @Test
     public void DepthFirstSearch() throws Exception {
 
         g.addEdge(0, 1);
@@ -39,7 +39,7 @@ public class GraphTest {
 
         g.DFS(0);
     }
-
+//0 1 5 2 7 3 4 6 
     @Test
     public void DepthFirstSearchDirected() throws Exception {
 
