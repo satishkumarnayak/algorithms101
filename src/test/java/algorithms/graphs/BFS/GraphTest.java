@@ -6,11 +6,11 @@ import org.junit.Test;
 
 public class GraphTest {
 
-    private Graph g;
+    private Graph1 g;
 
     @Before
     public void SetUp() throws Exception {
-        g = new Graph(8);
+        g = new Graph1(8);
     }
 
     @Test

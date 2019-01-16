@@ -4,7 +4,7 @@ import java.util.*;
 
 class Graph
 {
-    private int V;                     // No. of vertices
+    private int V;          // No. of vertices
     private LinkedList<Integer> adj[]; // Adjacency Lists
 
     Graph(int v) {
@@ -23,6 +23,7 @@ class Graph
         // Mark all the vertices as not visited (false)
         boolean visited[] = new boolean[V];
 
+        List<Integer> path = new ArrayList<Integer>();
         // Create a queue for BFS
         LinkedList<Integer> queue = new LinkedList<Integer>();
 
@@ -30,7 +31,7 @@ class Graph
         visited[s] = true;
         System.out.println("Starting at " + s);
         queue.add(s);
-
+    	path.add(s);
         while (queue.size() != 0) {
             // Dequeue a vertex from queue and print it
             s = queue.poll();
@@ -47,9 +48,14 @@ class Graph
                     visited[n] = true;
                     System.out.println("Queueing " + n);
                     queue.add(n);
+                    path.add(n);
                 }
             }
         }
+        
+    	for(Integer n : path) {
+			System.out.println(n+"--- ");
+		}
     }
 }
 
